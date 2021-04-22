@@ -24,10 +24,13 @@ public class LoggerUtil {
         logger.error(errMsg,exceptions);
     }
 
+
     public static void debug(String message){
         logger.debug(message);
     }
+
     public static void warn(String message){
         logger.warn(message);
     }
+
 }
