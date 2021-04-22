@@ -2,11 +2,6 @@ package com.myself.mybatis;
 
 import com.myself.logger.LoggerUtil;
 import com.myself.mybatis.bean.Employee;
-import com.myself.mybatis.config.MyBatisConfig;
-import org.apache.ibatis.session.SqlSession;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -15,15 +10,7 @@ import org.junit.Test;
  * @author linqin.zxl
  * @date 2021/4/22
  */
-public class SimpleDemoTest {
-
-    private SqlSession sqlSession;
-
-    @Before
-    public void before(){
-        sqlSession = MyBatisConfig.sqlSession();
-        Assert.assertNotNull(sqlSession);
-    }
+public class XmlSimpleDemoTest extends MybatisBaseTest{
 
     @Test
     public void testSelectOne(){
@@ -59,10 +46,5 @@ public class SimpleDemoTest {
         int delete = sqlSession.delete("com.myself.mybatis.EmployeeMapper.deleteEmp", 7);
         sqlSession.commit();
         LoggerUtil.warn(delete+"");
-    }
-
-    @After
-    public void after(){
-        sqlSession.close();
     }
 }
