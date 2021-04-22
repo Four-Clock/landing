@@ -21,4 +21,6 @@ public interface EmployeeMapper {
     int deleteEmp(int id);
 
     int insertEmpList(List<Employee> employees);
+
+    List<Employee> selectEmpAllList();
 }

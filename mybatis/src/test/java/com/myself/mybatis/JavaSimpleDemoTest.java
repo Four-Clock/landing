@@ -3,12 +3,15 @@ package com.myself.mybatis;
 import com.myself.logger.LoggerUtil;
 import com.myself.mybatis.bean.Employee;
 import com.myself.mybatis.mapper.EmployeeMapper;
+import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.StringJoiner;
 
 /**
  * 功能描述: JavaSimpleDemoTest
@@ -70,6 +73,16 @@ public class JavaSimpleDemoTest extends MybatisBaseTest {
         }
         employeeMapper.insertEmpList(employees);
         sqlSession.commit();
+    }
+
+    @Test
+    public void selectEmpAllList(){
+        List<Employee> employees = employeeMapper.selectEmpAllList();
+        StringJoiner joiner = new StringJoiner("\n");
+        for (Employee employee : employees) {
+            joiner.add(employee.toString());
+        }
+        LoggerUtil.info(joiner.toString());
     }
 
     @Override

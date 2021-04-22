@@ -1,0 +1,8 @@
+2021-04-22 21:05:42,494 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Employee(id=1, lastName=tom, gender=0, email=594405465@qq.com)||Employee(id=2, lastName=jimmy, gender=1, email=594405465@qq.com)||Employee(id=6, lastName=james_1, gender=1, email=link@qq.com)||Employee(id=9, lastName=mike_0, gender=0, email=163@qq.com)||Employee(id=10, lastName=mike_1, gender=0, email=163@qq.com)||Employee(id=11, lastName=mike_2, gender=0, email=163@qq.com)
+2021-04-22 21:06:17,960 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Employee(id=1, lastName=tom, gender=0, email=594405465@qq.com)
+Employee(id=2, lastName=jimmy, gender=1, email=594405465@qq.com)
+Employee(id=6, lastName=james_1, gender=1, email=link@qq.com)
+Employee(id=9, lastName=mike_0, gender=0, email=163@qq.com)
+Employee(id=10, lastName=mike_1, gender=0, email=163@qq.com)
+Employee(id=11, lastName=mike_2, gender=0, email=163@qq.com)
+2021-04-22 21:06:36,362 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Employee(id=1, lastName=tom, gender=0, email=594405465@qq.com)
