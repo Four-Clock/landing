@@ -14,7 +14,7 @@ public class XmlSimpleDemoTest extends MybatisBaseTest{
 
     @Test
     public void testSelectOne(){
-        Employee emp = sqlSession.selectOne("com.myself.mybatis.EmployeeMapper.selectEmp", 1);
+        Employee emp = sqlSession.selectOne("com.myself.mybatis.mapper.EmployeeMapper.selectEmp", 1);
         LoggerUtil.warn(emp.toString());
     }
 
@@ -24,7 +24,7 @@ public class XmlSimpleDemoTest extends MybatisBaseTest{
         emp.setEmail("123@qq.com");
         emp.setGender('1');
         emp.setLastName("mike");
-        int count = sqlSession.insert("com.myself.mybatis.EmployeeMapper.insertEmp", emp);
+        int count = sqlSession.insert("com.myself.mybatis.mapper.EmployeeMapper.insertEmp", emp);
         sqlSession.commit();
         LoggerUtil.warn(count+"");
     }
@@ -36,14 +36,14 @@ public class XmlSimpleDemoTest extends MybatisBaseTest{
         emp.setGender('1');
         emp.setLastName("james");
         emp.setId(6);
-        int update = sqlSession.update("com.myself.mybatis.EmployeeMapper.updateEmp", emp);
+        int update = sqlSession.update("com.myself.mybatis.mapper.EmployeeMapper.updateEmp", emp);
         sqlSession.commit();
         LoggerUtil.warn(update+"");
     }
 
     @Test
     public void testDeleteEmp(){
-        int delete = sqlSession.delete("com.myself.mybatis.EmployeeMapper.deleteEmp", 7);
+        int delete = sqlSession.delete("com.myself.mybatis.mapper.EmployeeMapper.deleteEmp", 7);
         sqlSession.commit();
         LoggerUtil.warn(delete+"");
     }

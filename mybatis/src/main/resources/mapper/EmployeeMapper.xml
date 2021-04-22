@@ -9,6 +9,12 @@
  #{id}：从传递过来的参数中取出id的值
 -->
 <mapper namespace="com.myself.mybatis.mapper.EmployeeMapper">
+    <!--<resultMap id="empResultMap" type="emp">
+       <id property="id" column="id"></id>
+         <result property="gender" column="gender" typeHandler="com.myself.mybatis.typehandler.SexTypeHandler"></result>
+         <result property="lastName" column="last_name"></result>
+         <result property="email" column="email"></result>
+    </resultMap>-->
     <select id="selectEmp" resultType="emp">
         select id,last_name,email,gender from tbl_employee where id = #{id}
     </select>
