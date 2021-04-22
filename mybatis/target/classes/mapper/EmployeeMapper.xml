@@ -9,7 +9,7 @@
  #{id}：从传递过来的参数中取出id的值
 -->
 <mapper namespace="com.myself.mybatis.EmployeeMapper">
-  <select id="selectEmp" resultType="com.myself.mybatis.bean.Employee">
-     select id,last_name lastName,email,gender from tbl_employee where id = #{id}
+  <select id="selectEmp" resultType="emp">
+     select id,last_name,email,gender from tbl_employee where id = #{id}
   </select>
 </mapper>
