@@ -8,7 +8,7 @@ import org.junit.Before;
 
 /**
  * 功能描述: MybatisBaseTest
- *
+ * Mybatis 单测基类
  * @author linqin.zxl
  * @date 2021/4/22
  */
