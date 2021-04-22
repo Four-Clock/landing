@@ -12,6 +12,12 @@
     <typeAliases>
         <typeAlias type="com.myself.mybatis.bean.Employee" alias="emp"></typeAlias>
     </typeAliases>
+    <!--自定义插件实现拦截方法的调用-->
+    <plugins>
+        <plugin interceptor="com.myself.mybatis.plugins.ConsumerPlugin">
+            <property name="pluginName" value="ConsumerPlugin"/>
+        </plugin>
+    </plugins>
 
     <environments default="development">
         <environment id="development">

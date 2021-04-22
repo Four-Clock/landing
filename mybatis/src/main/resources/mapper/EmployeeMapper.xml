@@ -28,4 +28,11 @@
         delete from tbl_employee where id = #{id}
     </delete>
 
+    <insert id="insertEmpList">
+        insert tbl_employee(last_name,email,gender) values
+        <foreach collection="list" item="empItem" separator=",">
+          (#{empItem.lastName},#{empItem.email},#{empItem.gender})
+        </foreach>
+    </insert>
+
 </mapper>

@@ -2,6 +2,8 @@ package com.myself.mybatis.mapper;
 
 import com.myself.mybatis.bean.Employee;
 
+import java.util.List;
+
 /**
  * 功能描述: EmployeeMapper
  *
@@ -17,4 +19,6 @@ public interface EmployeeMapper {
     int updateEmp(Employee employee);
 
     int deleteEmp(int id);
+
+    int insertEmpList(List<Employee> employees);
 }

@@ -6,6 +6,10 @@ import com.myself.mybatis.mapper.EmployeeMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /**
  * 功能描述: JavaSimpleDemoTest
  * 使用这种方式EmployeeMapper.xml 中的namespace要和com.myself.mybatis.mapper.EmployeeMapper相同
@@ -50,6 +54,22 @@ public class JavaSimpleDemoTest extends MybatisBaseTest {
         int delete = employeeMapper.deleteEmp(8);
         sqlSession.commit();
         LoggerUtil.warn(delete+"");
+    }
+
+    @Test
+    public void testInsertEmpList(){
+        int maxBatchSize = 3;
+        List<Employee> employees = new ArrayList<>();
+        for (int i=0;i<maxBatchSize;i++){
+            Employee employee = new Employee();
+            employee.setLastName("mike_"+i);
+            employee.setEmail("163@qq.com");
+            int gint = new Random().nextInt(1);
+            employee.setGender((gint+"").toCharArray()[0]);
+            employees.add(employee);
+        }
+        employeeMapper.insertEmpList(employees);
+        sqlSession.commit();
     }
 
     @Override
