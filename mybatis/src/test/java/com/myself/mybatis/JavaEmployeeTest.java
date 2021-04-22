@@ -1,17 +1,13 @@
 package com.myself.mybatis;
 
-import com.myself.logger.LoggerUtil;
 import com.myself.mybatis.bean.Employee;
 import com.myself.mybatis.mapper.EmployeeMapper;
-import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-import java.util.StringJoiner;
 
 /**
  * 功能描述: JavaSimpleDemoTest
@@ -19,14 +15,13 @@ import java.util.StringJoiner;
  * @author linqin.zxl
  * @date 2021/4/22
  */
-public class JavaSimpleDemoTest extends MybatisBaseTest {
+public class JavaEmployeeTest extends MybatisBaseTest {
 
     private static EmployeeMapper employeeMapper;
 
     @Test
     public void testSelectOne(){
-        Employee employee = employeeMapper.selectEmp(1);
-        LoggerUtil.info(employee.toString());
+        employeeMapper.selectEmp(1);
     }
 
     @Test
@@ -35,9 +30,8 @@ public class JavaSimpleDemoTest extends MybatisBaseTest {
         emp.setEmail("123@qq.com");
         emp.setGender('1');
         emp.setLastName("mike_1");
-        int count = employeeMapper.insertEmp(emp);
+        employeeMapper.insertEmp(emp);
         sqlSession.commit();
-        LoggerUtil.warn(count+"");
     }
 
     @Test
@@ -46,27 +40,27 @@ public class JavaSimpleDemoTest extends MybatisBaseTest {
         emp.setEmail("link@qq.com");
         emp.setGender('1');
         emp.setLastName("james_1");
+        emp.setDeptNo(2);
         emp.setId(6);
-        int update = employeeMapper.updateEmp(emp);
+        employeeMapper.updateEmp(emp);
         sqlSession.commit();
-        LoggerUtil.warn(update+"");
     }
 
     @Test
     public void testDeleteEmp(){
-        int delete = employeeMapper.deleteEmp(8);
+        employeeMapper.deleteEmp(8);
         sqlSession.commit();
-        LoggerUtil.warn(delete+"");
     }
 
     @Test
     public void testInsertEmpList(){
-        int maxBatchSize = 3;
+        int maxBatchSize = 10;
         List<Employee> employees = new ArrayList<>();
         for (int i=0;i<maxBatchSize;i++){
             Employee employee = new Employee();
             employee.setLastName("mike_"+i);
             employee.setEmail("163@qq.com");
+            employee.setDeptNo(new Random().nextInt(5));
             int gint = new Random().nextInt(1);
             employee.setGender((gint+"").toCharArray()[0]);
             employees.add(employee);
@@ -77,12 +71,8 @@ public class JavaSimpleDemoTest extends MybatisBaseTest {
 
     @Test
     public void selectEmpAllList(){
-        List<Employee> employees = employeeMapper.selectEmpAllList();
-        StringJoiner joiner = new StringJoiner("\n");
-        for (Employee employee : employees) {
-            joiner.add(employee.toString());
-        }
-        LoggerUtil.info(joiner.toString());
+        employeeMapper.selectEmpAllList();
+
     }
 
     @Override

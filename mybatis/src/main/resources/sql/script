@@ -1,0 +1,19 @@
+ CREATE TABLE `tbl_dept` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `dept_name` varchar(255) DEFAULT NULL,
+  `dept_desc` varchar(255) DEFAULT NULL,
+  `create_time` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3
+
+CREATE TABLE `tbl_employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `last_name` varchar(255) DEFAULT NULL,
+  `gender` char(1) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `dept_no` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3
+
+--更新表结构
+alter table tbl_employee add dept_no int

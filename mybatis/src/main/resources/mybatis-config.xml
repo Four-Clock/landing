@@ -11,6 +11,7 @@
     <!--指定返回类型别名-->
     <typeAliases>
         <typeAlias type="com.myself.mybatis.bean.Employee" alias="emp"></typeAlias>
+        <typeAlias type="com.myself.mybatis.bean.Dept" alias="dept"></typeAlias>
     </typeAliases>
     <!--自定义插件实现拦截方法的调用-->
     <plugins>
@@ -31,6 +32,8 @@
         </environment>
     </environments>
     <mappers>
+        <!--<package name="com.myself.mybatis.mapper"/>-->
         <mapper resource="mapper/EmployeeMapper.xml"/>
+        <mapper resource="mapper/DeptMapper.xml"/>
     </mappers>
 </configuration>

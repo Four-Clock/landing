@@ -10,7 +10,7 @@ import org.junit.Test;
  * @author linqin.zxl
  * @date 2021/4/22
  */
-public class XmlSimpleDemoTest extends MybatisBaseTest{
+public class XmlEmployeeTest extends MybatisBaseTest{
 
     @Test
     public void testSelectOne(){

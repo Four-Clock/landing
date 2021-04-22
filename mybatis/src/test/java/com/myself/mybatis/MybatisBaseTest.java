@@ -25,7 +25,7 @@ public class MybatisBaseTest {
     }
 
     @After
-    public void after(){
+    public final void after(){
         sqlSession.close();
     }
 

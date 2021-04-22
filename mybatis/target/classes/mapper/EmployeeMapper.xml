@@ -16,7 +16,10 @@
          <result property="email" column="email"></result>
     </resultMap>-->
     <sql id="selectEmp">
-        id,last_name,email,gender
+        id,last_name,email,gender,dept_no
+    </sql>
+    <sql id="insertEmp">
+        last_name,email,gender,dept_no
     </sql>
     <select id="selectEmp" resultType="emp">
         select <include refid="selectEmp"></include> from tbl_employee where id = #{id}
@@ -25,19 +28,19 @@
         select <include refid="selectEmp"></include> from tbl_employee limit 10
     </select>
     <insert id="insertEmp" parameterType="emp">
-        insert tbl_employee(last_name,email,gender) values(#{lastName},#{email},#{gender})
+        insert tbl_employee(<include refid="insertEmp"></include>) values(#{lastName},#{email},#{gender},#{deptNo})
     </insert>
     <update id="updateEmp" parameterType="emp">
-        update tbl_employee set last_name=#{lastName},email=#{email},gender=#{gender} where id = #{id}
+        update tbl_employee set last_name=#{lastName},email=#{email},gender=#{gender},dept_no=#{deptNo} where id = #{id}
     </update>
     <delete id="deleteEmp" parameterType="int">
         delete from tbl_employee where id = #{id}
     </delete>
 
     <insert id="insertEmpList">
-        insert tbl_employee(last_name,email,gender) values
+        insert tbl_employee(<include refid="insertEmp"></include>) values
         <foreach collection="list" item="empItem" separator=",">
-          (#{empItem.lastName},#{empItem.email},#{empItem.gender})
+          (#{empItem.lastName},#{empItem.email},#{empItem.gender},#{empItem.deptNo})
         </foreach>
     </insert>
 
