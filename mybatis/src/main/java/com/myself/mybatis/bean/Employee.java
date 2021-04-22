@@ -1,6 +1,7 @@
 package com.myself.mybatis.bean;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 功能描述: Employee
@@ -9,6 +10,7 @@ import lombok.Data;
  * @date 2021/4/22
  */
 @Data
+@ToString
 public class Employee {
     private Integer id;
     private String lastName;

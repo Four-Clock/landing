@@ -1,5 +1,6 @@
 package com.myself.mybatis;
 
+import com.myself.logger.LoggerUtil;
 import com.myself.mybatis.bean.Employee;
 import com.myself.mybatis.config.MyBatisConfig;
 import org.apache.ibatis.session.SqlSession;
@@ -27,7 +28,7 @@ public class SimpleDemoTest {
     public void testSelectOne(){
         try {
             Employee emp = sqlSession.selectOne("com.myself.mybatis.EmployeeMapper.selectEmp", 1);
-            System.out.println(emp);
+            LoggerUtil.warn(emp.toString());
         }finally {
             sqlSession.close();
         }

@@ -17,7 +17,6 @@ import java.io.InputStream;
  */
 public class MyBatisConfig {
 
-
     private static final Logger LOGGER = LoggerFactory.getLogger(MyBatisConfig.class) ;
 
     private static final String MYBATIS_CONFIG = "mybatis-config.xml";
