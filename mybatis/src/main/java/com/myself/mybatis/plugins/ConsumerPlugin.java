@@ -50,7 +50,7 @@ public class ConsumerPlugin implements Interceptor {
             LoggerUtil.info(String.valueOf(returnObject));
         }
         if (List.class.isAssignableFrom(returnObject.getClass())){
-            StringJoiner joiner = new StringJoiner("\n");
+            StringJoiner joiner = new StringJoiner("\n","\n","");
             for (Object o : ((List) returnObject)) {
                 joiner.add(o.toString());
             }

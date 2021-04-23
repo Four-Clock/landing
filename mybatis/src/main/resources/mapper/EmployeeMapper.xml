@@ -16,16 +16,16 @@
          <result property="email" column="email"></result>
     </resultMap>-->
     <sql id="selectEmp">
-        id,last_name,email,gender,dept_no
+        emp.id,emp.last_name,emp.email,emp.gender,emp.dept_no
     </sql>
     <sql id="insertEmp">
         last_name,email,gender,dept_no
     </sql>
     <select id="selectEmp" resultType="emp">
-        select <include refid="selectEmp"></include> from tbl_employee where id = #{id}
+        select <include refid="selectEmp"></include> from ${empTableName} where id = #{id}
     </select>
     <select id="selectEmpAllList" resultType="emp">
-        select <include refid="selectEmp"></include> from tbl_employee limit 10
+        select <include refid="selectEmp"></include> from ${empTableName}  limit 10
     </select>
     <insert id="insertEmp" parameterType="emp">
         insert tbl_employee(<include refid="insertEmp"></include>) values(#{lastName},#{email},#{gender},#{deptNo})

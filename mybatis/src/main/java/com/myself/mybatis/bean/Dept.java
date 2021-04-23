@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 功能描述: Dept
@@ -23,4 +24,5 @@ public class Dept {
     private String deptDesc;
     private Integer deptNo;
     private Date createTime;
+    private List<Employee> employees;
 }

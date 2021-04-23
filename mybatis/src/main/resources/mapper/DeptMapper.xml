@@ -10,16 +10,17 @@
 -->
 <mapper namespace="com.myself.mybatis.mapper.DeptMapper">
     <sql id="selectDept">
-        id,dept_name,dept_desc,create_time,dept_no
+        dept.id,dept.dept_name,dept.dept_desc,dept.create_time,dept.dept_no
     </sql>
     <sql id="insertDept">
-        dept_name,dept_desc,create_time,dept_no
+        dept.dept_name,dept.dept_desc,dept.create_time,dept.dept_no
     </sql>
+
     <select id="selectDept" resultType="dept">
-        select <include refid="selectDept"></include> from tbl_dept where id = #{id}
+        select <include refid="selectDept"></include> from ${deptTableName} where id = #{id}
     </select>
     <select id="selectDeptAllList" resultType="dept">
-        select <include refid="selectDept"></include> from tbl_employee limit 10
+        select <include refid="selectDept"></include> from ${deptTableName} limit 10
     </select>
     <insert id="insertDept" parameterType="dept">
         insert tbl_dept(<include refid="insertDept"></include>) values(#{deptName},#{deptDesc},#{createTime},#{deptNo})
@@ -40,5 +41,24 @@
           (#{deptItem.deptName},#{deptItem.deptDesc},#{deptItem.createTime},#{deptItem.deptNo})
         </foreach>
     </insert>
+    
+    <select id="selectAllDeptWithEmp" resultMap="deptResultMap">
+        select <include refid="selectDept"></include>,<include refid="com.myself.mybatis.mapper.EmployeeMapper.selectEmp"></include> from ${deptTableName} join
+          ${empTableName} on dept.dept_no = emp.dept_no
+    </select>
+    <resultMap id="deptResultMap" type="dept">
+        <id column="id" property="id" javaType="int"></id>
+        <result column="dept_name" property="deptName"></result>
+        <result column="dept_desc" property="deptDesc"></result>
+        <result column="create_time" property="createTime"></result>
+        <result column="dept_no" property="deptNo"></result>
+        <collection property="employees" ofType="emp">
+            <id column="id" property="id"></id>
+            <result column="last_name" property="lastName"></result>
+            <result column="email" property="email"></result>
+            <result column="gender" property="gender"></result>
+            <result column="dept_no" property="deptNo"></result>
+        </collection>
+    </resultMap>
 
 </mapper>

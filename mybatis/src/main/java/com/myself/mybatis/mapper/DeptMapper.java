@@ -22,4 +22,6 @@ public interface DeptMapper {
     Integer deleteDept(Integer id);
 
     Integer insertDeptList(List<Dept> depts);
+
+    List<Dept> selectAllDeptWithEmp();
 }

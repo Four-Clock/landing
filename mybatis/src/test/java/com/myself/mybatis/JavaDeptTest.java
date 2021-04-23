@@ -44,6 +44,12 @@ public class JavaDeptTest extends MybatisBaseTest{
         sqlSession.commit();
     }
 
+    @Test
+    public void selectAllDeptWithEmp(){
+         deptMapper.selectAllDeptWithEmp();
+    }
+
+
     @Override
     protected void init(SqlSession sqlSession) {
         deptMapper = sqlSession.getMapper(DeptMapper.class);

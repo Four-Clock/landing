@@ -21,7 +21,7 @@ public class JavaEmployeeTest extends MybatisBaseTest {
 
     @Test
     public void testSelectOne(){
-        employeeMapper.selectEmp(1);
+        employeeMapper.selectEmp(12);
     }
 
     @Test
