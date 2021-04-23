@@ -11,6 +11,7 @@ import java.util.List;
  * @date 2021/4/22
  */
 public interface DeptMapper {
+
     Dept selectDept(Integer id);
 
     List<Dept> selectDeptAllList();
