@@ -20,6 +20,7 @@ public class LoggerUtil {
         logger.info(message);
     }
 
+
     public static void error(String errMsg,Exception... exceptions){
         logger.error(errMsg,exceptions);
     }
