@@ -1,4 +1,4 @@
-package com.myself.juc.thread;
+package com.myself.thread;
 
 import com.myself.logger.LoggerUtil;
 
