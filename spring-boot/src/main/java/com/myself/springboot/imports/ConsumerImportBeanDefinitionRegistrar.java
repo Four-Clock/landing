@@ -1,6 +1,5 @@
 package com.myself.springboot.imports;
 
-import com.alibaba.fastjson.JSON;
 import com.myself.logger.LoggerUtil;
 import com.myself.springboot.bean.Brother;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
