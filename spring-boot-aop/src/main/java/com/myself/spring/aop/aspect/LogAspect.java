@@ -29,7 +29,7 @@ public class LogAspect {
     public Object beforeLog(ProceedingJoinPoint joinPoint, LogRecord logRecord){
         MethodSignature methodSignature=  (MethodSignature)joinPoint.getSignature();
         StringBuilder logBuilder = new StringBuilder();
-        logBuilder.append("start record log>>>>>>>>>>>>>>>>>>>>>>>>\n");
+        logBuilder.append("start record log >>>>>>>>>>>>>>>>>>>>>>>>\n");
         logBuilder.append("businessType:"+logRecord.businessType()+"******************\n");
         logBuilder.append("subBusinessType:"+logRecord.subBusinessType()+"******************\n");
         logBuilder.append("description:"+logRecord.description()+"******************");
