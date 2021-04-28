@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,14 +25,14 @@ import java.util.List;
 @Data
 public class DeptEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String deptName;
     private String deptDesc;
     private Date createTime;
     private Integer deptNo;
 
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
-    @JoinColumn(name = "dept_no")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "deptNo")
     private List<EmployeeEntity> employeeEntities;
 }

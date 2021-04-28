@@ -26,4 +26,11 @@ public class DeptServiceImpl implements DeptService{
         DeptEntity deptEntity = deptRepository.findById(id).orElse(null);
         return DeptConvertDataUtils.toDeptDTO(deptEntity);
     }
+
+    @Override
+    public Boolean insertSingleDept(DeptDTO deptDTO) {
+        DeptEntity deptEntity = deptRepository.save(DeptConvertDataUtils.toDeptEntity(deptDTO));
+        return deptEntity!=null;
+    }
+
 }

@@ -13,4 +13,6 @@ public interface DeptService {
 
     DeptDTO findDeptById(Integer id);
 
+    Boolean insertSingleDept(DeptDTO deptDTO);
+
 }

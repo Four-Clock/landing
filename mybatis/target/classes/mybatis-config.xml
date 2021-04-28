@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties">
+        <property name="deptTableName" value="tbl_dept dept"/>
+        <property name="empTableName" value="tbl_employee emp"/>
+    </properties>
+    <!--开启驼峰命名映射-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <!--指定返回类型别名-->
+    <typeAliases>
+        <typeAlias type="com.myself.mybatis.bean.Employee" alias="emp"></typeAlias>
+        <typeAlias type="com.myself.mybatis.bean.Dept" alias="dept"></typeAlias>
+    </typeAliases>
+    <!--自定义插件实现拦截方法的调用-->
+    <plugins>
+        <plugin interceptor="com.myself.mybatis.plugins.ConsumerPlugin">
+            <property name="pluginName" value="ConsumerPlugin"/>
+        </plugin>
+    </plugins>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--<package name="com.myself.mybatis.mapper"/>-->
+        <mapper resource="mapper/EmployeeMapper.xml"/>
+        <mapper resource="mapper/DeptMapper.xml"/>
+    </mappers>
+</configuration>

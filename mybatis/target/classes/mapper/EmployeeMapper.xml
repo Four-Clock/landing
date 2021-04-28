@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ namespace: 名称空间
+ id：唯一标识
+ resultType：返回值类型
+ #{id}：从传递过来的参数中取出id的值
+-->
+<mapper namespace="com.myself.mybatis.mapper.EmployeeMapper">
+    <!--<resultMap id="empResultMap" type="emp">
+       <id property="id" column="id"></id>
+         <result property="gender" column="gender" typeHandler="com.myself.mybatis.typehandler.SexTypeHandler"></result>
+         <result property="lastName" column="last_name"></result>
+         <result property="email" column="email"></result>
+    </resultMap>-->
+    <sql id="selectEmp">
+        emp.id,emp.last_name,emp.email,emp.gender,emp.dept_no
+    </sql>
+    <sql id="insertEmp">
+        last_name,email,gender,dept_no
+    </sql>
+    <select id="selectEmp" resultType="emp">
+        select <include refid="selectEmp"></include> from ${empTableName} where id = #{id}
+    </select>
+    <select id="selectEmpAllList" resultType="emp">
+        select <include refid="selectEmp"></include> from ${empTableName}  limit 10
+    </select>
+    <insert id="insertEmp" parameterType="emp">
+        insert tbl_employee(<include refid="insertEmp"></include>) values(#{lastName},#{email},#{gender},#{deptNo})
+    </insert>
+    <update id="updateEmp" parameterType="emp">
+        update tbl_employee set last_name=#{lastName},email=#{email},gender=#{gender},dept_no=#{deptNo} where id = #{id}
+    </update>
+    <delete id="deleteEmp" parameterType="int">
+        delete from tbl_employee where id = #{id}
+    </delete>
+
+    <insert id="insertEmpList">
+        insert tbl_employee(<include refid="insertEmp"></include>) values
+        <foreach collection="list" item="empItem" separator=",">
+          (#{empItem.lastName},#{empItem.email},#{empItem.gender},#{empItem.deptNo})
+        </foreach>
+    </insert>
+
+</mapper>

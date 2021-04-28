@@ -6,6 +6,7 @@ import cm.myself.jpa.entity.DeptEntity;
 import cm.myself.jpa.entity.EmployeeEntity;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -41,6 +42,7 @@ public class DeptConvertDataUtils {
         DeptEntity deptEntity = new DeptEntity();
         deptEntity.setId(deptDTO.getId());
         deptEntity.setDeptName(deptDTO.getDeptName());
+        deptEntity.setCreateTime(new Date());
         deptEntity.setDeptDesc(deptDTO.getDeptDesc());
         deptEntity.setDeptNo(deptDTO.getDeptNo());
         List<EmployeeEntity> employeeEntities = new ArrayList<>();

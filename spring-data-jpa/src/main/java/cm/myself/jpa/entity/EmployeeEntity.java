@@ -2,6 +2,7 @@ package cm.myself.jpa.entity;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,5 +25,6 @@ public class EmployeeEntity {
     private String lastName;
     private String email;
     private char gender;
+
     private Integer deptNo;
 }
