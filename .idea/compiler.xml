@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot" />
+        <module name="spring-boot-aop" />
+        <module name="mybatis" />
+        <module name="spring-data-jpa" />
         <module name="juc" />
         <module name="common-utils" />
-        <module name="spring-data-jpa" />
-        <module name="mybatis" />
+        <module name="spring-boot" />
       </profile>
     </annotationProcessing>
   </component>
@@ -21,6 +22,7 @@
       <module name="landing" options="-parameters" />
       <module name="mybatis" options="-parameters" />
       <module name="spring-boot" options="-parameters" />
+      <module name="spring-boot-aop" options="-parameters" />
       <module name="spring-data-jpa" options="-parameters" />
     </option>
   </component>
