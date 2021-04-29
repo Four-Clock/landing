@@ -1,14 +1,16 @@
 package com.myself.springboot.runner;
 
 import com.myself.logger.LoggerUtil;
-import com.myself.springboot.bean.Brother;
-import com.myself.springboot.bean.Mother;
+import com.myself.springboot.bean.Sister;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+
 
 /**
  * 功能描述: ComsumerApplicationRunner
@@ -17,16 +19,18 @@ import org.springframework.stereotype.Component;
  * @date 2021/4/27
  */
 @Component
-public class ComsumerApplicationRunner implements ApplicationRunner , BeanFactoryAware {
+public class ConsumerApplicationRunner implements ApplicationRunner , BeanFactoryAware {
 
     private BeanFactory beanFactory;
 
+
+    @Autowired
+    @Qualifier(value = "Sister")
+    private Sister sister;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Mother mother = beanFactory.getBean(Mother.class);
-        LoggerUtil.info(mother.getClass().getCanonicalName());
-        Brother brother = beanFactory.getBean(Brother.class);
-        LoggerUtil.info(brother.getName());
+        LoggerUtil.info(sister.toString());
     }
 
     @Override
