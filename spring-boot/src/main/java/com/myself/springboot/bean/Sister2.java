@@ -6,5 +6,9 @@ package com.myself.springboot.bean;
  * @author linqin.zxl
  * @date 2021/4/29
  */
+
 public class Sister2 extends Sister {
+    public String sing(String name){
+        return name;
+    }
 }

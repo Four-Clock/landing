@@ -1,6 +1,7 @@
 package com.myself.springboot.runner;
 
 import com.myself.logger.LoggerUtil;
+import com.myself.springboot.bean.GrandFather;
 import com.myself.springboot.bean.Sister;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -28,9 +29,13 @@ public class ConsumerApplicationRunner implements ApplicationRunner , BeanFactor
     @Qualifier(value = "Sister")
     private Sister sister;
 
+    @Autowired
+    private GrandFather grandFather;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        LoggerUtil.info(sister.toString());
+        LoggerUtil.info(grandFather.say());
+        grandFather.eat();
     }
 
     @Override

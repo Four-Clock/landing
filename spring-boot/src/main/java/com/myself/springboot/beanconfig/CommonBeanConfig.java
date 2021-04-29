@@ -2,6 +2,7 @@ package com.myself.springboot.beanconfig;
 
 import com.myself.springboot.bean.Sister;
 import com.myself.springboot.bean.Sister2;
+import com.myself.springboot.springproxy.ConsumerAbstractAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,5 +24,14 @@ public class CommonBeanConfig {
     public Sister sister2(){
         return new Sister2();
     }
+
+    @Bean
+    public ConsumerAbstractAutoProxyCreator consumerAbstractAutoProxyCreator(){
+        ConsumerAbstractAutoProxyCreator consumerAbstractAutoProxyCreator = new ConsumerAbstractAutoProxyCreator();
+        consumerAbstractAutoProxyCreator.setInterceptorNames(INTERCEPTOR_NAME);
+        return consumerAbstractAutoProxyCreator;
+    }
+
+    private static final String INTERCEPTOR_NAME = "consumerMethodInterceptor";
 
 }
