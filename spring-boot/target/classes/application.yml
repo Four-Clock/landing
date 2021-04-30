@@ -1,4 +1,0 @@
-spring:
-  application:
-    admin:
-      enabled: on

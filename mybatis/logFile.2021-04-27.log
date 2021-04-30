@@ -1,0 +1,16 @@
+2021-04-27 20:16:29,818 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:18:13,116 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:19:28,844 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:19:46,466 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:20:18,393 DEBUG [main] o.a.i.l.LogFactory [LogFactory.java:105] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2021-04-27 20:20:18,401 DEBUG [main] o.a.i.d.p.PooledDataSource [PooledDataSource.java:353] PooledDataSource forcefully closed/removed all connections.
+2021-04-27 20:20:18,402 DEBUG [main] o.a.i.d.p.PooledDataSource [PooledDataSource.java:353] PooledDataSource forcefully closed/removed all connections.
+2021-04-27 20:20:18,402 DEBUG [main] o.a.i.d.p.PooledDataSource [PooledDataSource.java:353] PooledDataSource forcefully closed/removed all connections.
+2021-04-27 20:20:18,402 DEBUG [main] o.a.i.d.p.PooledDataSource [PooledDataSource.java:353] PooledDataSource forcefully closed/removed all connections.
+2021-04-27 20:20:18,509 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:20:18,514 DEBUG [main] o.a.i.t.j.JdbcTransaction [JdbcTransaction.java:136] Opening JDBC Connection
+2021-04-27 20:42:26,849 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:44:26,440 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:44:27,033 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 10
+2021-04-27 20:45:09,834 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] ConsumerPlugin
+2021-04-27 20:45:10,375 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 10

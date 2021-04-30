@@ -15,6 +15,7 @@
         <module>juc</module>
         <module>spring-boot</module>
         <module>spring-boot-aop</module>
+        <module>java-agent</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

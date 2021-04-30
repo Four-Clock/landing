@@ -8,22 +8,28 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-aop" />
         <module name="mybatis" />
+        <module name="java-agent" />
         <module name="spring-data-jpa" />
         <module name="juc" />
         <module name="common-utils" />
         <module name="spring-boot" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="useragent" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-utils" options="-parameters" />
+      <module name="java-agent" options="-parameters" />
       <module name="juc" options="-parameters" />
       <module name="landing" options="-parameters" />
       <module name="mybatis" options="-parameters" />
       <module name="spring-boot" options="-parameters" />
       <module name="spring-boot-aop" options="-parameters" />
       <module name="spring-data-jpa" options="-parameters" />
+      <module name="useragent" options="-parameters" />
     </option>
   </component>
 </project>
