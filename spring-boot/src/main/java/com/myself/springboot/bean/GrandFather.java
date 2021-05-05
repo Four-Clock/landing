@@ -1,6 +1,7 @@
 package com.myself.springboot.bean;
 
 import com.myself.springboot.anno.AdviceRegisterIn;
+import com.myself.springboot.anno.PropertyOnCondition;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @AdviceRegisterIn
 @Component
+@PropertyOnCondition(name = "property")
 public class GrandFather extends Person {
 
     public String say(){

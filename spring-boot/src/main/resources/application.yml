@@ -2,3 +2,5 @@ spring:
   application:
     admin:
       enabled: on
+consumer:
+  condition: true

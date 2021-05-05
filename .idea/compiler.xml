@@ -9,6 +9,7 @@
         <module name="spring-boot-aop" />
         <module name="mybatis" />
         <module name="java-agent" />
+        <module name="asm" />
         <module name="spring-data-jpa" />
         <module name="juc" />
         <module name="common-utils" />
@@ -21,6 +22,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="asm" options="-parameters" />
       <module name="common-utils" options="-parameters" />
       <module name="java-agent" options="-parameters" />
       <module name="juc" options="-parameters" />
