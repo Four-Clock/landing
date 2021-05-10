@@ -4,3 +4,8 @@ spring:
       enabled: on
 consumer:
   condition: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -1,0 +1,11 @@
+spring:
+  application:
+    admin:
+      enabled: on
+consumer:
+  condition: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

@@ -3,6 +3,7 @@ package com.myself.springboot.runner;
 import com.myself.logger.LoggerUtil;
 import com.myself.springboot.bean.GrandFather;
 import com.myself.springboot.bean.Sister;
+import com.myself.springboot.generic.ConcretGeneric;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
@@ -36,6 +37,8 @@ public class ConsumerApplicationRunner implements ApplicationRunner , BeanFactor
     public void run(ApplicationArguments args) throws Exception {
         LoggerUtil.info(grandFather.say());
         grandFather.eat();
+        ConcretGeneric generic = new ConcretGeneric();
+        System.out.println(generic.getGenericClass());
     }
 
     @Override

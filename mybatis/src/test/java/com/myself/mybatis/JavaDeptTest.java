@@ -20,7 +20,6 @@ public class JavaDeptTest extends MybatisBaseTest{
 
     private DeptMapper deptMapper;
 
-
    @Test
     public void testInsertDeptList(){
         int maxBatchSize = 10;
