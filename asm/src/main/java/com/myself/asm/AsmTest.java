@@ -1,12 +1,8 @@
 package com.myself.asm;
 
-
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
-import java.util.Arrays;
 
 /**
  * 功能描述: AsmTset
