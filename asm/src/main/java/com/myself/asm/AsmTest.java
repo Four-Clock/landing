@@ -5,7 +5,7 @@ import java.net.URL;
 import java.net.URLClassLoader;
 
 /**
- * 功能描述: AsmTset
+ * 功能描述: AsmTest
  * 测试动态加载jar
  * @author linqin.zxl
  * @date 2021/5/8

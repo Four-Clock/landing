@@ -1,0 +1,4 @@
+<server name = "server" author="zxl">
+    <host name = "host" ip="localhost" port="8080">
+    </host>
+</server>

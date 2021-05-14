@@ -17,6 +17,7 @@
         <module>spring-boot-aop</module>
         <module>java-agent</module>
         <module>asm</module>
+        <module>digester</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
