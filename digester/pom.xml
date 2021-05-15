@@ -24,6 +24,12 @@
             <artifactId>common-utils</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>ognl</groupId>
+            <artifactId>ognl</artifactId>
+            <version>3.2.18</version>
+        </dependency>
     </dependencies>
 
 

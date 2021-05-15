@@ -3,3 +3,14 @@
 2021-05-14 17:30:55,152 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Server(name=server, author=zxl, host=Host(name=host, ip=localhost, port=8080))
 2021-05-14 17:50:36,941 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Server(name=server, author=zxl, host=Host(name=host, ip=localhost, port=8080))
 2021-05-14 17:53:41,718 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Server(name=server, author=zxl, host=Host(name=host, ip=localhost, port=8080))
+2021-05-14 18:06:46,819 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] Server(name=server, author=zxl, host=Host(name=host, ip=localhost, port=8080))
+2021-05-14 22:12:17,736 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 张二
+2021-05-14 22:18:16,175 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 26
+2021-05-14 22:19:11,214 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 26
+2021-05-14 22:19:37,761 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 26
+2021-05-14 22:20:56,117 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 张三
+2021-05-14 22:22:53,115 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 张三
+2021-05-14 22:31:50,763 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 姓名:张三 年龄：26 岁性别:男
+2021-05-14 22:32:42,931 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 姓名:张三 年龄：26 岁性别:男
+2021-05-14 22:33:23,994 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 姓名:张三 年龄：26 岁性别:男
+2021-05-14 22:36:48,207 INFO [main] c.m.l.LoggerUtil [LoggerUtil.java:20] 姓名:张三 年龄：26 岁 性别:男

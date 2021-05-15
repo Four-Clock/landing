@@ -13,7 +13,7 @@ import java.io.InputStream;
  * @author linqin.zxl
  * @date 2021/5/14
  */
-public class Main {
+public class DigesterMain {
 
     public static void main(String[] args) throws Exception{
         Digester digester = new Digester();
