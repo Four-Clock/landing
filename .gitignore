@@ -1,1 +1,3 @@
 /digester/target/
+/spring-data-jpa/target/
+/spring-data-jpa/logFile.log

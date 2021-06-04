@@ -10,4 +10,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2021/4/25
  */
 public interface DeptRepository extends JpaRepository<DeptEntity,Integer> {
+
+
+
+
+
 }

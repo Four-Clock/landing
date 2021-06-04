@@ -6,34 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-aop" />
-        <module name="mybatis" />
+        <module name="asm" />
+        <module name="common-utils" />
         <module name="digester" />
         <module name="java-agent" />
-        <module name="asm" />
-        <module name="spring-data-jpa" />
         <module name="juc" />
-        <module name="common-utils" />
+        <module name="mybatis" />
         <module name="spring-boot" />
+        <module name="spring-boot-aop" />
+        <module name="spring-data-jpa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="useragent" target="1.8" />
+      <module name="asm" target="1.8" />
+      <module name="common-utils" target="1.8" />
+      <module name="digester" target="1.8" />
+      <module name="java-agent" target="1.8" />
+      <module name="juc" target="1.8" />
+      <module name="landing" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="spring-boot" target="1.8" />
+      <module name="spring-boot-aop" target="1.8" />
+      <module name="spring-data-jpa" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="asm" options="-parameters" />
-      <module name="common-utils" options="-parameters" />
-      <module name="digester" options="-parameters" />
-      <module name="java-agent" options="-parameters" />
-      <module name="juc" options="-parameters" />
-      <module name="landing" options="-parameters" />
-      <module name="mybatis" options="-parameters" />
-      <module name="spring-boot" options="-parameters" />
-      <module name="spring-boot-aop" options="-parameters" />
-      <module name="spring-data-jpa" options="-parameters" />
-      <module name="useragent" options="-parameters" />
-    </option>
   </component>
 </project>
