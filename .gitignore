@@ -1,3 +1,9 @@
 /digester/target/
 /spring-data-jpa/target/
 /spring-data-jpa/logFile.log
+/asm/target/
+/common-utils/target/
+/java-agent/target/
+/juc/target/
+/mybatis/target/
+/spring-boot/target/
